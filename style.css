@@ -1,9 +1,20 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.container .ls,
+.container .rs {
+  margin: 0 10px;
 }
 
 nav {
@@ -55,7 +66,94 @@ nav .menu-btn i {
   display: none;
 }
 
-@media (max-width: 920px) {
+/* FIM DA SEÇÃO HEADER*/
+/* MAIN SECTION */
+main {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.texto {
+  width: 65%;
+  margin: 20px 0 30px 0;
+}
+
+.texto h1 {
+  text-transform: uppercase;
+}
+
+.texto h1 b {
+  color: #fca311;
+}
+
+.texto p {
+  color: #023047;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.texto .inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.ls .inputs input {
+  width: 50%;
+  display: inline-block;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #023047;
+  outline: #023047;
+  font-size: 16px;
+  color: #023047;
+}
+
+.ls .inputs input::-moz-placeholder {
+  color: #023047;
+}
+
+.ls .inputs input:-ms-input-placeholder {
+  color: #023047;
+}
+
+.ls .inputs input::placeholder {
+  color: #023047;
+}
+
+.ls .inputs button {
+  outline: none;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  background-color: #023047;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  height: 52px;
+}
+
+.socials {
+  margin-top: 30px;
+}
+
+.socials i {
+  font-size: 23px;
+  margin: 0 3px;
+  color: #023047;
+  background-color: #fca311;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.img,
+.img img {
+  width: 100%;
+}
+
+@media (max-width: 1030px) {
   nav .menu-btn i {
     display: block;
   }
@@ -84,5 +182,32 @@ nav .menu-btn i {
 nav ul li a:hover {
     background: none;
     color: #fca311;
+  }
+  main {
+    flex-direction: column;
+  }
+  .texto,
+.img {
+    width: 100%;
+    text-align: center;
+  }
+  .ls .inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .texto {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 375px) {
+  nav {
+    padding: 4%;
   }
 }/*# sourceMappingURL=style.css.map */
